@@ -1378,6 +1378,10 @@
 	  padding: 40px 0;
 	}
 
+	.segment.contact.main-image{
+		padding: 0 0 40px 0;
+	}
+
 	.segment.expertise{
 	  background: #faf9f7;
 	  padding: 30px 0;
@@ -1397,7 +1401,12 @@
 		position: relative;
 		clear:both;
 	  margin: auto;
-	  width: 980px;
+	  width: 1080px;
+	}
+
+	.wrapper.main-image{
+
+	  width: 100%;
 	}
 
 
@@ -1473,11 +1482,18 @@
 	#main_image{
 	  display: block;
 		position: relative;
-	  width: 980px;
-	  margin-top: 30px;
+	  width: 100%;
+	  /* margin-top: 30px; */
 		text-align: right;
-		background: url('images/main_image_rachat_980.jpg');
+		background: url('images/main_image_rachat_full.jpg');
 		background-size: cover;
+		background-color: #398;
+	}
+
+
+	.wrapper-form{
+		width: 1080px;
+		margin: auto;
 	}
 
 
@@ -1514,6 +1530,7 @@
 	  vertical-align: top;
 	  margin: 30px 0;
 	  width: 480px;
+		margin-right: 30px;
 
 	}
 
@@ -1760,7 +1777,7 @@
 
 	/* Media Queries */
 
-	@media screen and (max-width:1000px) {
+	@media screen and (max-width:1100px) {
 
 	  .segment.header{
 	    padding: 30px;
@@ -1768,6 +1785,10 @@
 
 	  .segment.contact{
 	    padding: 40px 30px;
+	  }
+
+		.segment.contact.main-image{
+	    padding: 0 0 40px 0;
 	  }
 
 	  .segment.expertise{
@@ -1786,6 +1807,11 @@
 	  .wrapper{
 	   width: 100%;
 	  }
+
+		.wrapper-form{
+			width: 100%;
+
+		}
 
 	  #main_image{
 	    width: 100%;
@@ -1816,13 +1842,17 @@
 	@media screen and (max-width:768px) {
 
 
+		.segment.contact.main-image{
+	    padding: 0 0 0 0;
+	  }
+
 		#mobile-image{
 			display: block;
 			width: 100%;
 			margin-right: 5%;
 			height: 42vw;
 			overflow: hidden;
-			margin-top: 5vw;
+			/* margin-top: 5vw; */
 		}
 
 		#mobile-image img{
@@ -1833,7 +1863,7 @@
 	  #main_image, #form{
 	    display: block;
 	    width: 100%;
-	    margin-top: 5vw;
+	  /*   margin-top: 5vw; */
 	  }
 
 	  #main_image{
@@ -1846,6 +1876,8 @@
 			display: block;
 			height: auto;
 			margin-bottom: 0;
+			padding: 30px;
+			margin-top: 0;
 		}
 
 		#form .title{
@@ -2137,67 +2169,71 @@
 					<div class="wrapper">
 						<h1>Votre prêt immobilier a de la valeur</h1>
 						<p id="baseline">Un conseiller expérimenté vous fait sa meilleure proposition de rachat<sup>(1)</sup> selon votre situation</p>
+					</div>
+				</div>
 
-
+				<div class="segment contact main-image">
+					<div class="wrapper main-image">
 						<div id="mobile-image">
 							<img src="images/main_image_rachat_980.jpg" alt="Société Générale">
 						</div>
 
 						<div id="main_image">
-							<!-- <img src="images/main_image_rachat_980.jpg" alt="Société Générale"> -->
-							<!-- FORM -->
-							<div id="form">
-								<div class="title">
-									<h2>Je prends rendez-vous pour une étude personnalisée</h2>
-								</div>
-
-								<div class="data">
-									<!-- Civilité -->
-									<div class="fieldGroup radio">
-										<label class="example-send-yourself-copy">
-											<input type="radio" name="civil_" id="civil_mr" value="Mr">
-											<span class="label-body">Madame</span>
-										</label>
-										<label class="example-send-yourself-copy">
-											<input type="radio" name="civil_" id="civil_mme" value="Mme">
-											<span class="label-body">Monsieur</span>
-										</label>
+							<div class="wrapper-form">
+								<!-- FORM -->
+								<div id="form">
+									<div class="title">
+										<h2>Je prends rendez-vous pour une étude personnalisée</h2>
 									</div>
 
-									<!-- Nom/Prénom -->
-									<div class="fieldGroup">
-										<div class="row">
-											<div class="six columns">
-												<label for="exampleEmailInput">Nom</label>
-												<input class="u-full-width" type="text" id="nom_" placeholder="votre nom" onfocus="this.placeholder = ''" maxlength=50>
-											</div>
-											<div class="six columns">
-												<label for="exampleEmailInput">Prénom</label>
-												<input class="u-full-width" type="text" id="prenom_" placeholder="votre pr&eacute;nom" onfocus="this.placeholder = ''" maxlength=50>
+									<div class="data">
+										<!-- Civilité -->
+										<div class="fieldGroup radio">
+											<label class="example-send-yourself-copy">
+												<input type="radio" name="civil_" id="civil_mr" value="Mr">
+												<span class="label-body">Madame</span>
+											</label>
+											<label class="example-send-yourself-copy">
+												<input type="radio" name="civil_" id="civil_mme" value="Mme">
+												<span class="label-body">Monsieur</span>
+											</label>
+										</div>
+
+										<!-- Nom/Prénom -->
+										<div class="fieldGroup">
+											<div class="row">
+												<div class="six columns">
+													<label for="exampleEmailInput">Nom</label>
+													<input class="u-full-width" type="text" id="nom_" placeholder="votre nom" onfocus="this.placeholder = ''" maxlength=50>
+												</div>
+												<div class="six columns">
+													<label for="exampleEmailInput">Prénom</label>
+													<input class="u-full-width" type="text" id="prenom_" placeholder="votre pr&eacute;nom" onfocus="this.placeholder = ''" maxlength=50>
+												</div>
 											</div>
 										</div>
-									</div>
 
-									<!-- Date de naissance -->
-									<div class="fieldGroup">
-											<label for="exampleEmailInput">Date de naissance</label>
-											<input class="birthdate" type="text" id="date_j" maxlength="2" placeholder="JJ" onfocus="this.placeholder = ''" >
-											<input class="birthdate" type="text" id="date_m" maxlength="2" placeholder="MM" onfocus="this.placeholder = ''" >
-											<input class="birthdate year" type="text" id="date_a" maxlength="4" placeholder="AAAA" onfocus="this.placeholder = ''" >
-									</div>
+										<!-- Date de naissance -->
+										<div class="fieldGroup">
+												<label for="exampleEmailInput">Date de naissance</label>
+												<input class="birthdate" type="text" id="date_j" maxlength="2" placeholder="JJ" onfocus="this.placeholder = ''" >
+												<input class="birthdate" type="text" id="date_m" maxlength="2" placeholder="MM" onfocus="this.placeholder = ''" >
+												<input class="birthdate year" type="text" id="date_a" maxlength="4" placeholder="AAAA" onfocus="this.placeholder = ''" >
+										</div>
 
-									<!-- Email-->
-									<div class="fieldGroup">
-											<label for="exampleEmailInput">Email</label>
-											<input class="u-full-width" type="text" id="email_" placeholder="Votre e-mail" onfocus="this.placeholder = ''">
-									</div>
+										<!-- Email-->
+										<div class="fieldGroup">
+												<label for="exampleEmailInput">Email</label>
+												<input class="u-full-width" type="text" id="email_" placeholder="Votre e-mail" onfocus="this.placeholder = ''">
+										</div>
 
-									<p class="form-mention">Tous les champs ci-dessus sont obligatoires.<br>Voir informations sur la protection des données personnelles.<sup>(2)</sup></p>
-									<a href="#" class="button u-full-width" id="cta_" onclick="sendData(xiti_xtpage);"><span>RENCONTRER UN CONSEILLER<i class="icon-arrow"></i></span></a>
-									<div class="row"><a href="https://particuliers.societegenerale.fr/emprunter/prets-immobiliers/demande-en-ligne.html" class="customer">Déja client ?</a></div>
+										<p class="form-mention">Tous les champs ci-dessus sont obligatoires.<br>Voir informations sur la protection des données personnelles.<sup>(2)</sup></p>
+										<a href="#" class="button u-full-width" id="cta_" onclick="sendData(xiti_xtpage);"><span>RENCONTRER UN CONSEILLER<i class="icon-arrow"></i></span></a>
+										<div class="row"><a href="https://particuliers.societegenerale.fr/emprunter/prets-immobiliers/demande-en-ligne.html" class="customer">Déja client ?</a></div>
+									</div>
 								</div>
+								<!-- END FORM -->
 							</div>
-							<!-- END FORM -->
 						</div>
 
 
